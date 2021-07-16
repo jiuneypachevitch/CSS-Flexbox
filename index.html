@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="uft-8">
+  <title>CSS FlexBox</title>
+  <link rel="stylesheet" href="css/index.css" media="all" />
+</head>
+
+<body>
+  <div class="grupo">
+    <h1 class="titulo">Flex Item</h1>
+    <div class="big-bloco flex wrap-reverse ">
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: flex-grow</h1>
+        <h1>flex-grow: 0;</h1>
+        <section class="container flex ">
+          <div class="item grow0">1</div>
+          <div class="item grow0">2</div>
+          <div class="item grow0">3</div>
+          <div class="item grow0">4</div>
+        </section>
+        <h1>flex-grow: 1;</h1>
+        <section class="container flex ">
+          <div class="item grow1">1</div>
+          <div class="item grow1">2</div>
+          <div class="item grow1">3</div>
+          <div class="item grow1">4</div>
+        </section>
+        <h1>flex-grow: 2; // mesmo valor = todos com mesmo tamanho</h1>
+        <section class="container flex ">
+          <div class="item grow2">1</div>
+          <div class="item grow2">2</div>
+          <div class="item grow2">3</div>
+          <div class="item grow2">4</div>
+        </section>
+        <h1>flex-grow: 1; </h1>
+        <section class="container flex ">
+          <div class="item grow1">1</div>
+          <div class="item grow1">TestandoTestando2</div>
+          <div class="item grow1">3</div>
+          <div class="item grow1">4</div>
+        </section>
+        <h1>flex-grow: misturado; // 0, 1 e 2</h1>
+        <section class="container flex ">
+          <div class="item grow0">1</div>
+          <div class="item grow1">2</div>
+          <div class="item grow2">3</div>
+          <div class="item grow0">4</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: flex-basis</h1>
+        <h1>flex-basis: auto;</h1>
+        <section class="container flex ">
+          <div class="item basis-auto">Palavra 1</div>
+          <div class="item basis-auto">2</div>
+          <div class="item basis-auto-grow-2">3</div>
+          <div class="item basis-auto-width">4</div>
+          <div class="item basis-auto-grow-0">5</div>
+        </section>
+        <h1>flex-basis: 0;</h1>
+        <section class="container flex ">
+          <div class="item basis-0">Teste de Cont</div>
+          <div class="item basis-0">2</div>
+          <div class="item basis-0-grow-2">Palavra</div>
+          <div class="item basis-0-width">4</div>
+          <div class="item basis-0-grow-0">5</div>
+        </section>
+        <h1>flex-basis: número;</h1>
+        <section class="container flex wrap">
+          <div class="item basis-110">1</div>
+          <div class="item basis-110">12</div>
+          <div class="item basis-110">12345678910</div>
+          <div class="item basis-300">1234</div>
+          <div class="item basis-110-porcento">1</div>
+          <div class="item basis-110-porcento">12</div>
+          <div class="item basis-110-porcento">123</div>
+          <div class="item basis-110-porcento">1234</div>
+        </section>
+        <h1>flex-basis: número; // diferente conteúdo</h1>
+        <section class="container flex wrap">
+          <div class="item basis-110">Conteúdo grande</div>
+          <div class="item basis-110">PalavraMaiorMaior</div>
+          <div class="item basis-110">Oi</div>
+        </section>
+        <h1>flex-basis: número; / flex-grow: 1;</h1>
+        <section class="container flex wrap">
+          <div class="item basis-110-grow-1">1</div>
+          <div class="item basis-110-grow-1">12</div>
+          <div class="item basis-110-grow-1">1234</div>
+          <div class="item basis-110-grow-1">12345</div>
+          <div class="item basis-600-grow-1">5</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: flex-shrink</h1>
+        <h1>flex-shrink: 1;</h1>
+        <section class="container flex ">
+          <div class="item shrink-1">1</div>
+          <div class="item shrink-1">2</div>
+          <div class="item shrink-1">3</div>
+          <div class="item shrink-1">4</div>
+        </section>
+        <h1>flex-shrink: 1; //conteúdos diferentes</h1>
+        <section class="container flex ">
+          <div class="item shrink-1">1</div>
+          <div class="item shrink-1">Teste 2</div>
+          <div class="item shrink-1">Oi 3</div>
+          <div class="item shrink-1">4</div>
+        </section>
+        <h1>flex-shrink: misturado; //conteúdos diferentes</h1>
+        <section class="container flex ">
+          <div class="item shrink-1">1</div>
+          <div class="item shrink-1">Teste 2</div>
+          <div class="item shrink-3">Oi 3</div>
+          <div class="item shrink-3">4</div>
+        </section>
+        <h1>flex-shrink: 1; //conteúdos maior que o container</h1>
+        <section class="container flex ">
+          <div class="item shrink-1">TesteTesteTesteTesteTeste</div>
+          <div class="item shrink-1">TesteTesteTesteTeste 2</div>
+          <div class="item shrink-1">Oi 3</div>
+          <div class="item shrink-1">4</div>
+        </section>
+        <h1>flex-shrink: misturado; //conteúdos maior que o container</h1>
+        <section class="container flex ">
+          <div class="item shrink-1">TesteTesteTesteTesteTeste</div>
+          <div class="item shrink-1">TesteTesteTesteTeste 2</div>
+          <div class="item shrink-3">Oi 3</div>
+          <div class="item shrink-3">4</div>
+        </section>
+        <h1>flex-shrink: 1; / flex-basis: valor;</h1>
+        <section class="container flex ">
+          <div class="item shrink-1-basis">TesteTesteTesteTesteTeste</div>
+          <div class="item shrink-1-basis">TesteTesteTesteTeste 2</div>
+          <div class="item shrink-1-basis">Oi 3</div>
+          <div class="item shrink-1-basis">4</div>
+        </section>
+        <h1>flex-shrink: 0; / flex-basis: valor;</h1>
+        <section class="container flex wrap">
+          <div class="item shrink-0-basis">TesteTesteTesteTesteTeste</div>
+          <div class="item shrink-0-basis">TesteTesteTesteTeste 2</div>
+          <div class="item shrink-0-basis">Oi 3</div>
+          <div class="item shrink-0-basis">4</div>
+        </section>
+        <h1>flex-shrink: 0; / flex-basis: valor; / wrap</h1>
+        <section class="container flex wrap">
+          <div class="item shrink-0-basis">TesteTesteTesteTesteTeste</div>
+          <div class="item shrink-0-basis">TesteTesteTesteTeste 2</div>
+          <div class="item shrink-0-basis">Oi 3</div>
+          <div class="item shrink-0-basis">4</div>
+        </section>
+        <h1>flex-shrink: misturado; / flex-basis: valor; </h1>
+        <section class="container flex">
+          <div class="item shrink-1-basis">1</div>
+          <div class="item shrink-1-basis">Teste 2</div>
+          <div class="item shrink-3-basis">3</div>
+          <div class="item shrink-3-basis">4</div>
+        </section>
+        <h1>flex-shrink: misturado; / flex-basis: valor; / wrap </h1>
+        <section class="container flex wrap ">
+          <div class="item shrink-1-basis">1</div>
+          <div class="item shrink-1-basis">Teste 2</div>
+          <div class="item shrink-3-basis">3</div>
+          <div class="item shrink-3-basis">4</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: flex</h1>
+        <h1>flex: n 1 auto;</h1>
+        <section class="container flex ">
+          <div class="item flex-basis-auto">Palavra 1</div>
+          <div class="item flex-basis-auto">2</div>
+          <div class="item flex-basis-auto-grow-2">3</div>
+          <div class="item flex-basis-auto-width">4</div>
+          <div class="item flex-basis-auto-grow-0">5</div>
+        </section>
+        <h1>flex: 1;</h1>
+        <section class="container flex ">
+          <div class="item flex-basis-0">Test de Cont</div>
+          <div class="item flex-basis-0">2</div>
+          <div class="item flex-basis-0-grow-2">Palavra</div>
+          <div class="item flex-basis-0-width">4</div>
+          <div class="item flex-basis-0-grow-0">5</div>
+        </section>
+        <h1>flex: 0 1 n;</h1>
+        <section class="container flex wrap">
+          <div class="item flex-basis-110">1</div>
+          <div class="item flex-basis-110">12</div>
+          <div class="item flex-basis-110">12345678910</div>
+          <div class="item flex-basis-300">1234</div>
+          <div class="item flex-basis-110-porcento">1</div>
+          <div class="item flex-basis-110-porcento">12</div>
+          <div class="item flex-basis-110-porcento">123</div>
+          <div class="item flex-basis-110-porcento">1234</div>
+        </section>
+        <h1>flex: 0 1 n; // Conteúdo diferente</h1>
+        <section class="container flex wrap">
+          <div class="item flex-basis-110">Conteúdo Grande</div>
+          <div class="item flex-basis-110">PalavraMaior</div>
+          <div class="item flex-basis-110">Oi</div>
+        </section>
+        <h1>flex: 1 1 n; </h1>
+        <section class="container flex wrap">
+          <div class="item flex-basis-110-grow-1">1</div>
+          <div class="item flex-basis-110-grow-1">12</div>
+          <div class="item flex-basis-110-grow-1">1234</div>
+          <div class="item flex-basis-450-grow-1">12345</div>
+          <div class="item flex-basis-110-grow-1">5</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: order</h1>
+        <h1>order: misturados;</h1>
+        <section class="container flex ">
+          <div class="item order-2">1</div>
+          <div class="item order-4">2</div>
+          <div class="item order-1">3</div>
+          <div class="item order-3">4</div>
+        </section>
+        <h1>order: negativo; / flex-grow: 1;</h1>
+        <section class="container flex ">
+          <div class="item order-2 grow1">1</div>
+          <div class="item order-4 grow1">2</div>
+          <div class="item order-1 grow1">3</div>
+          <div class="item order-menos-1 grow1">4</div>
+        </section>
+        <h1>order: valores iguais; / flex-grow: 1; / column</h1>
+        <section class="container flex column">
+          <div class="item order-2 grow1">1</div>
+          <div class="item order-2 grow1">2</div>
+          <div class="item order-1 grow1">3</div>
+          <div class="item order-1 grow1">4</div>
+        </section>
+        <h1>order: valores iguais e/ou omitidos / flex-grow: 1; / column</h1>
+        <section class="container flex column">
+          <div class="item order-2 grow1">1</div>
+          <div class="item order-2 grow1">2</div>
+          <div class="item order-menos-1 grow1">3</div>
+          <div class="item grow1">4</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: align-self</h1>
+        <h1>align-self: multiplos;</h1>
+        <section class="container flex align-items-stretch">
+          <div class="item flex-item-1 align-self-flex-end">1</div>
+          <div class="item flex-item-1 align-self-flex-start">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 align-self-center">Teste 4</div>
+        </section>
+        <h1>align-self: multiplos;</h1>
+        <section class="container flex align-items-stretch ">
+          <div class="item flex-item-1 pt-1 align-self-flex-start ">1</div>
+          <div class="item flex-item-1 align-self-baseline">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 align-self-center">Teste 4</div>
+        </section>
+        <h1>align-self: stretch; / align-items: flex-end;</h1>
+        <section class="container flex align-items-flex-end ">
+          <div class="item flex-item-1 pt-1 ">1</div>
+          <div class="item flex-item-1 align-self-stretch">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 ">Teste 4</div>
+        </section>
+        <h1>align-self: multiplos; / column</h1>
+        <section class="container flex column ">
+          <div class="item flex-item-1 align-self-flex-end">1</div>
+          <div class="item flex-item-1 align-self-flex-start">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 align-self-center">Teste 4</div>
+        </section>
+        <h1>align-self: multiplos; / column / baseline</h1>
+        <section class="container flex column ">
+          <div class="item flex-item-1 align-self-baseline">1</div>
+          <div class="item flex-item-1 align-self-flex-start">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 align-self-center">Teste 4</div>
+        </section>
+        <h1>align-self: stretch; / column / align-items: flex-end</h1>
+        <section class="container flex column align-items-flex-end">
+          <div class="item flex-item-1 ">1</div>
+          <div class="item flex-item-1 align-self-stretch">Teste 2 do Item</div>
+          <div class="item flex-item-1">Teste 3 do Item agora Mesmo esse Mesmo</div>
+          <div class="item flex-item-1 ">Teste 4</div>
+        </section>
+
+      </div>
+    </div> <!-- End big-bloco-->
+  </div> <!-- End Grupo-->
+
+  <div class="grupo">
+    <h1 class="titulo">Flex Container</h1>
+    <div class="big-bloco flex wrap-reverse ">
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: display</h1>
+
+        <h1>display: block;</h1>
+        <section class="container">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </section>
+
+        <h1>display: flex;</h1>
+        <section class="container flex">
+          <div class="item">1</div>
+          <div class="item">2</div>
+          <div class="item">3</div>
+          <div class="item">4</div>
+        </section>
+
+        <h1>display: flex;</h1>
+        <section class="container flex">
+          <div class="item">Teste 1</div>
+          <div class="item">Teste 2</div>
+          <div class="item">Teste 3</div>
+          <div class="item">Teste 4</div>
+          <div class="item">Teste 5</div>
+          <div class="item">Teste 6</div>
+          <div class="item">Teste 7</div>
+          <div class="item">Teste 8</div>
+        </section>
+
+        <h1>display: flex; flex-wrap: wrap;</h1>
+        <section class="container flex flex-wrap">
+          <div class="item">Teste 1</div>
+          <div class="item">Teste 2</div>
+          <div class="item">Teste 3</div>
+          <div class="item">Teste 4</div>
+          <div class="item">Teste 5</div>
+          <div class="item">Teste 6</div>
+          <div class="item">Teste 7</div>
+        </section>
+
+        <h1>display: flex; // flex-item-1</h1>
+        <section class="container">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+      </div> <!-- fim Bloco -->
+
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: direction</h1>
+        <h1>flex-direction: row;</h1>
+        <section class="container flex row">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+        </section>
+
+        <h1>flex-direction: row-reverse;</h1>
+        <section class="container flex row-reverse">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+        </section>
+
+        <h1>flex-direction: column;</h1>
+        <section class="container flex column">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+        </section>
+
+        <h1>flex-direction: column-reverse;</h1>
+        <section class="container flex column-reverse">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+        </section>
+
+        <h1>flex-direction: column-reverse;</h1>
+        <section class="container flex column-reverse">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">2</div>
+          <div class="item flex-item-1">3</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: wrap</h1>
+        <h1>flex-wrap: nowrap;</h1>
+        <section class="container flex nowrap">
+          <div class="item flex-item-1">TesteDoItem1</div>
+          <div class="item flex-item-1">TesteDoItem2</div>
+          <div class="item flex-item-1">TesteDoItem3</div>
+          <div class="item flex-item-1">TesteDoItem4</div>
+        </section>
+
+        <h1>flex-wrap: wrap;</h1>
+        <section class="container flex wrap">
+          <div class="item flex-item-1">TesteDoItem1</div>
+          <div class="item flex-item-1">TesteDoItem2</div>
+          <div class="item flex-item-1">TesteDoItem3</div>
+          <div class="item flex-item-1">TesteDoItem4</div>
+        </section>
+
+        <h1>flex-wrap: wrap-reverse;</h1>
+        <section class="container flex wrap-reverse">
+          <div class="item flex-item-1">TesteDoItem1</div>
+          <div class="item flex-item-1">TesteDoItem2</div>
+          <div class="item flex-item-1">TesteDoItem3</div>
+          <div class="item flex-item-1">TesteDoItem4</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: justify-content</h1>
+        <h1>justify-content: flex-start;</h1>
+        <section class="container flex flex-start">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: flex-end;</h1>
+        <section class="container flex flex-end">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: center;</h1>
+        <section class="container flex center">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: space-between;</h1>
+        <section class="container flex space-between">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: space-around</h1>
+        <section class="container flex space-around">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: flex-start; //column</h1>
+        <section class="container flex flex-start column">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: flex-end; //column</h1>
+        <section class="container flex flex-end column">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: center; //column</h1>
+        <section class="container flex center column">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: space-between; //column</h1>
+        <section class="container flex space-between column">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: space-around; //column</h1>
+        <section class="container flex space-around column">
+          <div class="item ">1</div>
+          <div class="item ">Teste 2</div>
+          <div class="item ">3</div>
+          <div class="item ">4</div>
+        </section>
+
+        <h1>justify-content: space-around; / column // itens com flex: 1;</h1>
+        <section class="container flex space-around column ">
+          <div class="item flex-item-1">1</div>
+          <div class="item flex-item-1">Teste 2</div>
+          <div class="item flex-item-1">3</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: align-items</h1>
+        <h1>align-items: stretch;</h1>
+        <section class="container flex align-items-stretch ">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: flex-start;</h1>
+        <section class="container flex align-items-flex-start ">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: flex-end;</h1>
+        <section class="container flex align-items-flex-end ">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: center;</h1>
+        <section class="container flex align-items-center ">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: baseline;</h1>
+        <section class="container flex align-items-baseline ">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: stretch; //column</h1>
+        <section class="container flex align-items-stretch column">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: flex-start; //column</h1>
+        <section class="container flex align-items-flex-start column">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: flex-end; //column</h1>
+        <section class="container flex align-items-flex-end column">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: center; //column</h1>
+        <section class="container flex align-items-center column">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>align-items: baseline; //column</h1>
+        <section class="container flex align-items-baseline column">
+          <div class="item flex-item-1 pt-1">1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">4</div>
+        </section>
+        <h1>justify-content: center; E align-items: center; E flex: 0;</h1>
+        <section class="container flex align-items-center center h-4">
+          <div class="item flex-item-0">Este item está verticalmente e horizontalmente alinhado ao centro</div>
+        </section>
+      </div>
+      <div class="bloco">
+        <h1 class="titulo">FlexBox: align-content</h1>
+        <h1>align-content: stretch;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-stretch ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+        <h1>align-content: flex-start;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-flex-start ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+        <h1>align-content: flex-end;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-flex-end ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+        <h1>align-content: center;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-center ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+        <h1>align-content: space-between;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-space-between ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+        <h1>align-content: space-around;</h1>
+        <section class="container flex wrap w-2 h-3 align-content-space-around ">
+          <div class="item flex-item-1">TestandoPalavra1</div>
+          <div class="item flex-item-1">Teste 2 do item</div>
+          <div class="item flex-item-1">Teste 3 do item agora mesmo</div>
+          <div class="item flex-item-1">Teste 4</div>
+          <div class="item flex-item-1">Teste 5</div>
+          <div class="item flex-item-1">Teste 6</div>
+          <div class="item flex-item-1">Teste 7</div>
+          <div class="item flex-item-1">Teste 8</div>
+        </section>
+      </div>
+    </div> <!-- End big-bloco-->
+  </div> <!-- End Grupo-->
+</body>
+
+</html>
